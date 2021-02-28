@@ -9,10 +9,32 @@ pipeline{
   }
 
 stages{
-    stage('maven clean'){
+    stage('maven validate'){
         steps{
-          sh 'mvn clean'
+          sh 'mvn validate'
         }
     }
 }
+stages{
+    stage('maven compile'){
+        steps{
+          sh 'mvn compile'
+        }
+    }
+}
+stages{
+    stage('maven install'){
+        steps{
+          sh 'mvn install'
+        }
+    }
+}
+stages{
+    stage('maven package'){
+        steps{
+          sh 'mvn package'
+        }
+    }
+}
+
 }
