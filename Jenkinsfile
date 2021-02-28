@@ -22,11 +22,7 @@ stages{
         }
     }
 
-    stage('maven install'){
-        steps{
-          sh 'mvn install'
-        }
-    }
+   
 
     stage('maven package'){
         steps{
