@@ -14,7 +14,7 @@ stages{
           sh 'mvn validate'
         }
     }
-}
+
 
     stage('maven compile'){
         steps{
@@ -35,4 +35,5 @@ stages{
     }
 
 
+}
 }
